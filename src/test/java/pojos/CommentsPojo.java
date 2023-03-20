@@ -11,7 +11,7 @@ import lombok.Setter;
 @NoArgsConstructor
 @AllArgsConstructor
 
-public class CommentsPOJO {
+public class CommentsPojo {
     @Expose(serialize = false, deserialize = true)
     private int id;
     @Expose(serialize = false, deserialize = true)
@@ -23,7 +23,7 @@ public class CommentsPOJO {
     @Expose
     private String body;
 
-    public CommentsPOJO (String body){
+    public CommentsPojo(String body){
         this.body = body;
     }
 }
