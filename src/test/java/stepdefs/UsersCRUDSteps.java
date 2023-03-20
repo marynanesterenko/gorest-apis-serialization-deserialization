@@ -1,13 +1,17 @@
 package stepdefs;
 
+import endpoints.RESTUsers;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 
 public class UsersCRUDSteps {
+
+    RESTUsers users = RESTUsers.getInstance();
+
     @Given("user creation request is successful")
     public void user_creation_request_is_successful() {
-        
+
     }
 
     @When("user creation in the Database is verified")

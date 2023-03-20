@@ -10,8 +10,7 @@ import lombok.Setter;
 @Setter
 @NoArgsConstructor
 @AllArgsConstructor
-
-public class PostsPOJO {
+public class TodosPojo {
 
     @Expose(serialize = false, deserialize = true)
     private int id;
@@ -20,10 +19,14 @@ public class PostsPOJO {
     @Expose
     private String title;
     @Expose
-    private String body;
+    private String due_on;
+    @Expose
+    private String status;
 
-    public PostsPOJO (String title, String body){
+    public TodosPojo(String title, String due_on, String status){
         this.title = title;
-        this.body = body;
+        this.status = status;
+        this.due_on = due_on;
     }
+
 }

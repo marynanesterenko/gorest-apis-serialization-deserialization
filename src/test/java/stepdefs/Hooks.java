@@ -2,6 +2,7 @@ package stepdefs;
 
 import io.cucumber.java.Before;
 import io.restassured.RestAssured;
+import org.junit.jupiter.api.BeforeEach;
 import utils.ConfigReader;
 
 public class Hooks {
@@ -14,7 +15,7 @@ public class Hooks {
     // Update = PUT/PATCH Request
     // Delete = DELETE Request
     // as we know - we have to provide authorization token before sending the Request to the server
-    @Before
+    @BeforeEach
     public static void setUp() {
 
         // calling .initializeProperties() method to read the config.properties file and to get the values for the following keys: "api.host" and "api.version"
